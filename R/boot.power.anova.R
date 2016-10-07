@@ -74,6 +74,12 @@ design.anova <- function(
                 1,
                 paste,collapse=".")
 
+  # check sanity of resulting column- and row-names
+  # (without check errors occur when using silent.load and column names start with numbers, for example)
+  if (! identical(vars, make.names(vars, unique = TRUE))) {
+    stop("Illegal naming of factor levels found. Please make sure to use only letters and numbers and to start names with a letter instead of a number.")
+  }
+
   if (! is.null(save_input_as)) {
     file_name_cor_matrix <- paste0(save_input_as,"_cor_matrix.csv")
     file_name_means_and_sds <- paste0(save_input_as,"_means_and_sds.csv")
@@ -163,7 +169,7 @@ design.anova <- function(
     between            =  between,
     within             =  within,
     num_between_conds  =  num_between_conds,
-    factor_names          =  factor_names,
+    factor_names       =  factor_names,
     cov_matrix         =  cov_matrix,
     means              =  means_sds$mean
   )

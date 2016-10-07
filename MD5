@@ -1,6 +1,7 @@
-d0e3efee4ac9326b41d23d9856ffa441 *DESCRIPTION
+7bf1cb1055e5722bd3b6a9310767348a *DESCRIPTION
 2b8c7519cd7708e0904846361fdf1b72 *NAMESPACE
-6e39defca25d9b059c4a344d80b40026 *R/boot.power.anova.R
+f6971e654b64cee3f266cca5d28d9b9c *NEWS
+a3651521ac61b87afc6543b127bef93c *R/boot.power.anova.R
 ba1e97a1bbd1bb5e1aef3911358354cb *R/plot.power_by_samplesize.R
 f1aa44b3756e440b2b8943815fe53c89 *man/boot.power.anova.Rd
 5e5a58507adcf5e75991310ac75f2de2 *man/design.anova.Rd

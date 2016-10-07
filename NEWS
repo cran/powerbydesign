@@ -1,0 +1,13 @@
+powerbydesign v1.0.3 (Release date: 2016-10-06)
+==============
+
+Changes:
+
+* Names of factor levels should start with letters instead of numbers (ensure sanity of column names in csv files that are created when setting the parameter save_input_as of the design.anova function to TRUE)
+
+powerbydesign v1.0.2 (Release date: 2016-04-04)
+==============
+
+Changes:
+
+* Initial release to CRAN
