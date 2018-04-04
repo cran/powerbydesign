@@ -19,7 +19,7 @@
 #' Use the "save_input_as" parameter in order to define a file name prefix of the files where
 #' the function saves your input values. This will populate the dialog windows with the saved
 #' values on the next execution of this function. If the parameter is NULL, input values will
-#' not be saved.
+#' not be saved. NOTE: You must delete the respective files if you want to change the design.
 #'
 #' @param between list, between-subjects factors including its levels
 #' @param within list, within-subjects factors including its levels
@@ -88,13 +88,22 @@ design.anova <- function(
     file_name_means_and_sds <- NULL
   }
 
-  cor_matrix <- matrix()
+  cor_matrix <- matrix(nrow=0,ncol=0)
   if (! is.null(file_name_cor_matrix)) tryCatch({cor_matrix <- as.matrix(utils::read.csv(file_name_cor_matrix,row.names=1))}, warning=function(w){}, error=function(e){})
   new_cor_matrix_created <- FALSE
 
+  # check whether all correlations in loaded cor_matrix equal default_within_correlation parameter supplied to this function
+  if (length(cor_matrix) > 0) { # length(cor_matrix) > 0: file exists and was not empty
+    cors_in_loaded_matrix <- unique(c(cor_matrix))
+    cors_in_loaded_matrix <- setdiff(cors_in_loaded_matrix, c(1, NA)) # all cors that do not equal the diagonal or NA fields
+    if (any(cors_in_loaded_matrix != default_within_correlation)) { # any: works with both within designs (length of cors_in_loaded_matrix >= 1) and between designs (cors_in_loaded_matrix is empty and thus any(..!= ..) returns FALSE)
+      warning(paste0("Mismatch between parameter 'default_within_correlation' and correlations found in file ",file_name_cor_matrix,"! Ignoring 'default_within_correlation' and using values from file."))
+    }
+  }
+
   # Create new correlation matrix because none saved or saved matrix does not fit to design
   if (! (identical(rownames(cor_matrix),vars) && identical(colnames(cor_matrix),vars))) {
-    if (silent_load && !is.na(cor_matrix)) { # !is.na(cor_matrix): file exists and was not empty but content does not match design
+    if (silent_load && length(cor_matrix) > 0) { # length(cor_matrix) > 0: file exists and was not empty but content does not match design
       stop(paste0("Content of ",file_name_cor_matrix," does not match the specified design. Disable silent_load or delete file to enter new data."))
     }
     new_cor_matrix_created <- TRUE

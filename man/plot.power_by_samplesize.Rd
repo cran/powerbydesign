@@ -25,4 +25,3 @@ Plots the power-by-samplesize data.frames returned by the power functions.
 \seealso{
 \code{\link{boot.power.anova}}
 }
-

@@ -1,3 +1,10 @@
+powerbydesign v1.0.4 (Release date: 2018-04-04)
+==============
+
+Changes:
+
+* design.anova: Print Warning on mismatch between default_within_correlation parameter and correlation matrix loaded from saved file
+
 powerbydesign v1.0.3 (Release date: 2016-10-06)
 ==============
 

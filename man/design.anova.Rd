@@ -50,7 +50,7 @@ condition.
 Use the "save_input_as" parameter in order to define a file name prefix of the files where
 the function saves your input values. This will populate the dialog windows with the saved
 values on the next execution of this function. If the parameter is NULL, input values will
-not be saved.
+not be saved. NOTE: You must delete the respective files if you want to change the design.
 }
 \examples{
 \dontrun{
@@ -68,4 +68,3 @@ design <- design.anova(
 \seealso{
 \code{\link{boot.power.anova}}
 }
-

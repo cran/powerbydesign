@@ -66,4 +66,3 @@ plot(power_by_samplesize,
 \seealso{
 \code{\link{design.anova}}, \code{\link{plot.power_by_samplesize}}
 }
-
