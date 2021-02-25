@@ -163,7 +163,7 @@ design.anova <- function(
   }
 
   if (sum(means_sds$sd <= 0) > 0) {
-    stop("All SD must be >= 0")
+    stop("All SD must be > 0")
   }
 
   diag(cor_matrix) <- means_sds$sd

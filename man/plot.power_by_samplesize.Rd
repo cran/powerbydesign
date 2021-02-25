@@ -4,8 +4,7 @@
 \alias{plot.power_by_samplesize}
 \title{Plot Power Results}
 \usage{
-\method{plot}{power_by_samplesize}(x, crit_power = NULL, plot_dir = NULL,
-  ...)
+\method{plot}{power_by_samplesize}(x, crit_power = NULL, plot_dir = NULL, ...)
 }
 \arguments{
 \item{x}{list, results of a power function}

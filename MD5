@@ -1,10 +1,10 @@
-509d86eefee46124d42d44490db456f4 *DESCRIPTION
+0b06dbc3884ef5c638c91dfeea22441c *DESCRIPTION
 2b8c7519cd7708e0904846361fdf1b72 *NAMESPACE
-4a7d2ccb5447daf3d930a2b0a0972396 *NEWS
-ff1d3dcbf039bae548bde2f5fe3ac473 *R/boot.power.anova.R
+bc988f7b04bb63a73e94422a7e21c881 *NEWS
+b00b417f22ee621e9af16037c063ff63 *R/boot.power.anova.R
 ba1e97a1bbd1bb5e1aef3911358354cb *R/plot.power_by_samplesize.R
 7621864be1baec3641f7cc052427814a *man/boot.power.anova.Rd
-c6c6be5097d99777d736910e11d32f7f *man/design.anova.Rd
-bf8e039f36d9377f232a7e3e133dfb89 *man/plot.power_by_samplesize.Rd
+0b4f1fd98594c5835fc2485be0e76f03 *man/design.anova.Rd
+d3497a25bc477de57a82b491e981fd4a *man/plot.power_by_samplesize.Rd
 675c7ec8c1a4212d04956eefd82b69ea *tests/test_all.R
 f190e55cb1053fbcf3b7c42b761a13ea *tests/testthat/test_powerbydesign.R

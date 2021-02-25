@@ -1,8 +1,8 @@
 Package: powerbydesign
 Type: Package
 Title: Power Estimates for ANOVA Designs
-Date: 2018-04-04
-Version: 1.0.4
+Date: 2021-02-25
+Version: 1.0.5
 Author: Frank Papenmeier [aut, cre]
 Maintainer: Frank Papenmeier <frank.papenmeier@uni-tuebingen.de>
 Authors@R: c(person("Frank","Papenmeier", role=c("aut","cre"),
@@ -15,8 +15,8 @@ License: GPL (>= 3)
 LazyData: TRUE
 Suggests: testthat
 Imports: lme4, gdata, MASS, reshape2, stringr, plyr, ggplot2
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.1
 NeedsCompilation: no
-Packaged: 2018-04-04 13:36:28 UTC; fpapenmeier
+Packaged: 2021-02-25 09:44:29 UTC; fpapenmeier
 Repository: CRAN
-Date/Publication: 2018-04-04 15:20:30 UTC
+Date/Publication: 2021-02-25 13:20:02 UTC

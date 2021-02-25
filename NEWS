@@ -1,3 +1,11 @@
+powerbydesign v1.0.5 (Release date: 2021-02-25)
+==============
+
+Changes:
+
+* design.anova: Error message now correctly states that 'all SD must be > 0' (instead of '>=')
+
+
 powerbydesign v1.0.4 (Release date: 2018-04-04)
 ==============
 

@@ -4,9 +4,13 @@
 \alias{design.anova}
 \title{Define an ANOVA Design}
 \usage{
-design.anova(between = list(), within = list(),
-  default_within_correlation = 0, save_input_as = NULL,
-  silent_load = FALSE)
+design.anova(
+  between = list(),
+  within = list(),
+  default_within_correlation = 0,
+  save_input_as = NULL,
+  silent_load = FALSE
+)
 }
 \arguments{
 \item{between}{list, between-subjects factors including its levels}
